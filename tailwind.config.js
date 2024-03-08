@@ -4,11 +4,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Montserrat': ['Montserrat', 'sans-serif'],
+        'Lato': ['Lato', 'sans-serif'],
+        'EBGaramond': ['EBGaramond','sans-serif'],
       },
 
       colors: {
+        "east-bay": "#405789",
+        "bombay": "#8995AA",
+        "alice-blue": "#ECF6FF",
+        "ebony": "#13152E"
       },
+
       height: {
       },
 

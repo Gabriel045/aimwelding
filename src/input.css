@@ -1,3 +1,209 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: EBGaramond;
+    src: url('../assets/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf');
+    font-weight: 1 999;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url('../assets/fonts/Lato/Lato-Regular.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: Lato;
+    src: url('../assets/fonts/Lato/Lato-Bold.ttf');
+    font-weight: 700;
+}
+
+:root {
+    --alice-blue: #019BA6;
+    --east-bay: #405789;
+    --ebony: #13152E;
+    --bombay: #8995AA;
+}
+
+body {
+    font-family: Lato;
+    overflow-x: hidden;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.block_content {
+    max-width: 1440px;
+    width: 100%;
+}
+
+
+/* Menu */
+#menu-header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 25px
+}
+
+.menu-header-menu-container {
+    height: 100%;
+}
+
+#menu-header-menu a {
+    color: var(--east-bay);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 111.111% */
+    text-transform: capitalize;
+}
+
+#menu-header-menu>.menu-item-has-children::after {
+    content: url(../assets/images/chevron.svg);
+    right: 0;
+    position: absolute;
+    top: 18px;
+    transition: all .3s ease;
+}
+
+#menu-header-menu>.menu-item-has-children:hover::after {
+    transform: scaleY(-1) translateY(-5px);
+    transition: all .5s ease;
+}
+
+
+#menu-header-menu>.menu-item-has-children>.sub-menu {
+    background: white;
+    border-radius: 5px;
+    box-shadow: -4px 3px 12.4px 0px rgba(0, 0, 0, 0.15);
+    left: 0;
+    width: max-content;
+    opacity: 0;
+    padding: 20px;
+    position: absolute;
+    top: 70%;
+    transform: translateY(8px);
+    visibility: hidden;
+    z-index: 2;
+    transition: all .3s ease;
+}
+
+#menu-header-menu>.menu-item-has-children {
+    position: relative;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+#menu-header-menu>.menu-item-has-children:hover>.sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.btn_dark{
+    border: 1px solid var(--ebony);
+    border-radius: 80px;
+    background: var(--ebony);
+    display: flex;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    transition: all .3s ease;
+
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: capitalize;
+
+    &:hover{
+        background: white;
+        color: var(--ebony);
+        transition: all .3s ease;
+    }
+}
+
+.parent-grid #menu-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-row-gap: 18px;
+    grid-column-gap: 38px;
+    grid-auto-flow: column;
+}
+
+#menu-footer-utility-pages{
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+
+#menu-footer-utility-pages a,
+.parent-grid #menu-footer a{
+    font-size: 18px;
+    color: var(--bombay);
+}
+
+.gform_wrapper {
+    width: 100%;
+}
+
+#gform_1{
+    position: relative;
+    .ginput_container{
+        input{
+            padding: 24px 297px 24px 24px;
+            border-radius: 80px;
+            font-size: 18px;
+        }
+    }
+    .gform_footer{
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(0, -50%);
+        margin-top: 0px;
+
+        input{
+            color: #FFF;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            text-transform: capitalize;
+            border-radius: 80px;
+            background: #405789;
+            display: flex;
+            padding: 16px 24px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            margin-bottom: 0px;
+            cursor: pointer;
+            border: 1px solid var(--east-bay);
+            transition: all .3s ease;
+
+            &:hover{
+                background: white;
+                color: var(--east-bay);
+                transition: all .3s ease;
+            }
+        }
+    }
+}
