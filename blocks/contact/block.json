@@ -1,0 +1,22 @@
+{
+    "name": "acf/contact",
+    "title": "Contact",
+    "description": "A custom Contact for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Contact"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "contact.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/contact/screenshot.png"
+            }
+        }
+    }
+}

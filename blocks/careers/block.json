@@ -1,0 +1,22 @@
+{
+    "name": "acf/careers",
+    "title": "Careers",
+    "description": "A custom Careers for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Careers"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "careers.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/careers/screenshot.png"
+            }
+        }
+    }
+}

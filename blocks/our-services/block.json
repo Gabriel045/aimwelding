@@ -1,0 +1,22 @@
+{
+    "name": "acf/our-services",
+    "title": "Our Services",
+    "description": "A custom Our Services for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Our Services"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "our-services.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/our-services/screenshot.png"
+            }
+        }
+    }
+}

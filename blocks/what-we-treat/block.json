@@ -1,0 +1,22 @@
+{
+    "name": "acf/what-we-treat",
+    "title": "What We Treat",
+    "description": "A custom What We Treat for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "What We Treat"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "what-we-treat.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/what-we-treat/screenshot.png"
+            }
+        }
+    }
+}

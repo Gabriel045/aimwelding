@@ -1,0 +1,22 @@
+{
+    "name": "acf/blog",
+    "title": "Blog",
+    "description": "A custom Blog for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Blog"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "blog.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/blog/screenshot.png"
+            }
+        }
+    }
+}

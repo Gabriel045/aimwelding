@@ -1,0 +1,22 @@
+{
+    "name": "acf/rehab-options",
+    "title": "Rehab Options",
+    "description": "A custom Rehab Options for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Rehab Options"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "rehab-options.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/rehab-options/screenshot.png"
+            }
+        }
+    }
+} 

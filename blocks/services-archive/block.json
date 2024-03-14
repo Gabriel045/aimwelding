@@ -1,0 +1,22 @@
+{
+    "name": "acf/services-archive",
+    "title": "services Archive",
+    "description": "A custom services Archive for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "services Archive"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "services-archive.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/services-archive/screenshot.png"
+            }
+        }
+    }
+}

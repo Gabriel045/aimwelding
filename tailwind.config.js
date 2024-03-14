@@ -12,7 +12,8 @@ module.exports = {
         "east-bay": "#405789",
         "bombay": "#8995AA",
         "alice-blue": "#ECF6FF",
-        "ebony": "#13152E"
+        "ebony": "#13152E",
+        "anakiwa": "#8AE8FF"
       },
 
       height: {

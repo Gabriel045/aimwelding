@@ -1,0 +1,22 @@
+{
+    "name": "acf/our-team",
+    "title": "Our Team",
+    "description": "A custom Our Team for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Our Team"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "our-team.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/our-team/screenshot.png"
+            }
+        }
+    }
+}

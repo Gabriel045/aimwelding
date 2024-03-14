@@ -35,6 +35,23 @@ function af_add_theme_scripts() {
         'tailwind',
         get_template_directory_uri() . '/dist/output.css',
     );
+
+    // slick
+    wp_enqueue_style(
+        'slick-css',
+        get_template_directory_uri() . '/assets/slick/slick.css',
+    );
+    wp_enqueue_style(
+        'slick-theme',
+        get_template_directory_uri() . '/assets/slick/slick-theme.css',
+    );
+    wp_enqueue_script(
+        'slick-js',
+        get_template_directory_uri() . '/assets/slick/slick.min.js',
+        ['jquery'],
+        theme_version,
+        true
+    );
 }
 
 
@@ -70,4 +87,18 @@ if (function_exists('acf_add_options_page')) {
             'redirect'      => false
         ));
     }
+}
+
+
+//pagination for blog page                                                                                                                                                                                                                                                                                                                                                                
+function pagainate_link_function($wp_query)
+{
+    //pagination for blog page                                                                                                                                                                                                                                                                                                                                                                
+    echo paginate_links(array(
+        'current' => max(1, get_query_var('paged')),
+        'format' => '?paged=%#%',
+        'total' => $wp_query->max_num_pages,
+        'prev_text'    => __('<span class="btn-light" style="padding: 10px 38px;" >prev</span>'),
+        'next_text'    => __('<span class="btn-light" style="padding: 10px 38px;" >next</span>'),
+    ));
 }
