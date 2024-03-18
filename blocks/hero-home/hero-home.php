@@ -50,11 +50,11 @@ $small_image_2      = get_field('small_image_2');
 ?>
 
 <section id="hero-image" class="">
-    <div class="block_content lg:pr-[156px] relative">
-        <img class="hidden lg:block absolute right-0 bottom-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector.svg" />
-        <div class="bg-ebony pb-[150px]  lg:pb-[18px] pt-[18px] pl-[30px] lg:pl-[75px] pr-[30px] lg:pr-[24px] lg:rounded-r-[24px] flex flex-wrap lg:flex-nowrap">
+    <div class="block_content relative lg:px-[75px] lg:pt-[20px]">
+        <img class="hidden lg:block absolute right-[-10%] bottom-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector.svg" />
+        <div class="bg-ebony pb-[150px]  lg:pb-[18px] pt-[50px] lg:pt-[18px] pl-[30px] lg:pl-[75px] pr-[30px] lg:pr-[24px] lg:rounded-[24px] flex flex-wrap lg:flex-nowrap">
             <div class="w-full lg:w-[50%] lg:pr-[80px] gap-y-[30px]  flex flex-col justify-center">
-                <h5 class="text-anakiwa text-[16px] lg:text-[18px]"><?php echo $upper_text ?></h5>
+                <p class="text-anakiwa text-[16px] lg:text-[18px]"><?php echo $upper_text ?></p>
                 <h1><?php echo $title ?></h1>
                 <p class="text-[#D8E5E9] text-[16px] lg:text-[18px] leading-[25px] lg:leading-[30px]"><?php echo $text ?></p>
                 <div class="w-fit">

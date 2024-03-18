@@ -50,15 +50,15 @@ $cards   =  get_field('card');
             $title          =  $card['title'];
             $text           =  $card['text'];
         ?>
-            <div class="flex mb-[100px] last:mb-0 <?php echo $image_position == "Right" ? 'flex-row-reverse' : '' ?>">
-                <div class="w-1/2 flex">
+            <div class="flex flex-wrap lg:flex-nowrap lg:flex-row  mb-[100px] last:mb-0 <?php echo $image_position == "Right" ? 'flex-col-reverse lg:flex-row-reverse' : 'flex-col-reverse flex-row' ?>">
+                <div class="w-full lg:w-1/2 flex">
                     <figure class="w-full">
                         <img class="w-full rounded-[24px] object-cover h-full" src="<?php echo esc_url($image) ?>">
                     </figure>
                 </div>
-                <div class="w-1/2 flex flex-col justify-center <?php echo $image_position == "Right" ? 'pr-[70px]' : 'pl-[70px]' ?>">
-                    <h3 class="text-east-bay text-[36px] font-[700] font-EBGaramond"> <?php echo $title ?></h3>
-                    <div class="my-[30px] text-bombay leading-[30px] text-[18px]"><?php echo $text ?></div>
+                <div class="w-full lg:w-1/2 flex flex-col justify-center <?php echo $image_position == "Right" ? 'lg:pr-[70px]' : 'lg:pl-[70px]' ?>">
+                    <h3 class="text-east-bay text-start text-[36px] font-[700] font-EBGaramond"> <?php echo $title ?></h3>
+                    <div class="my-[30px] text-bombay leading-[30px] text-[16px] lg:text-[18px]"><?php echo $text ?></div>
                 </div>
             </div>
         <?php endforeach ?>

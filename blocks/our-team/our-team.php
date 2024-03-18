@@ -53,10 +53,10 @@ $cards = new WP_Query($args);
 $cards = $cards->posts;
 ?>
 
-<section class="">
-    <div class="block_content <?php echo $background == "Blue" ? "bg-alice-blue rounded-[24px] py-[76px] px-[48px] mx-[76px]" : " pb-[100px]  px-[30px] lg:px-[127px]" ?>">
+<section class="<?php echo $background == "Blue" ? 'bg-alice-blue' : 'lg:bg-white'?> ">
+    <div class="block_content <?php echo $background == "Blue" ? "lg:rounded-[24px] py-[76px] px-[30px] lg:px-[48px] lg:mx-[76px]" : " pb-[100px]  px-[30px] lg:px-[127px]" ?>">
         <div class="flex flex-col-reverse lg:flex-row flex-wrap lg:flex-nowrap">
-            <div class="w-full lg:w-[56%] flex gap-[10px] gap-y-[10px] mt-[50px] lg:mt-0 relative">
+            <div class="w-full lg:w-[56%] flex gap-[10px] lg:gap-[20px] gap-y-[10px] mt-[50px] lg:mt-0 relative">
                 <div class="w-[32%] flex flex-col gap-y-[20px]">
                     <?php for ($i = 0; $i <= 3; $i++) : ?>
                         <article class="rounded-[16px] py-[20px] px-[10px] lg:px-[30px] relative z-[99] <?php echo $background == "Blue" ? "bg-white" : "bg-alice-blue" ?>">
@@ -93,7 +93,7 @@ $cards = $cards->posts;
             </div>
             <div class="lg:ml-[70px] lg:mt-[160px] w-full lg:w-[44%]">
                 <h2 class="no-line"><?php echo $title ?></h2>
-                <div class="my-[30px] text-bombay text-[18px]  leading-[30px] relative z-[99]">
+                <div class="my-[30px] text-bombay text-[16px] lg:text-[18px] leading-[30px] relative z-[99]">
                     <?php echo $paragraph ?>
                 </div>
                 <div class="w-fit flex">

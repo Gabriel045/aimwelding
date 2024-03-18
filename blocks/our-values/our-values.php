@@ -56,8 +56,8 @@ $cards = get_field("cards");
         </div>
         <div class="flex mt-[100px] flex-row flex-wrap gap-[40px]">
             <?php foreach ($cards as $key => $card) : ?>
-                <div class="w-[31%]">
-                    <div class="h-[405px] rounded-[24px] py-[64px] px-[25px] flex  flex-col  gap-y-[24px] bg-alice-blue">
+                <div class="w-full lg:w-[31%]">
+                    <div class="h-[380px] rounded-[24px] py-[64px] px-[25px] flex  flex-col  gap-y-[24px] bg-alice-blue">
                         <figure>
                             <img src="<?php echo $card["icon"] ?>" alt="" srcset="">
                         </figure>

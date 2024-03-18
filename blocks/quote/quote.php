@@ -38,13 +38,13 @@ if (!empty($block['align'])) {
 
 // Load values and assign defaults.
 
-$content              = get_field('content');
+$title              = get_field('title');
 ?>
 
-<section id="blog-content"  class="">
-    <div class="block_content">
-        <div class="">
-            <?php echo $content ?>
+<section id="blog-content" class="">
+    <div class="block_content ">
+        <div class="bg-alice-blue rounded-[24px] px-[30px] lg:px-[65px] py-[40px] lg:py-[100px]">
+            <h5 class="text-center leading-[34px] text-[24px]">"<?php echo $title ?>"</h5>
         </div>
     </div>
 </section>

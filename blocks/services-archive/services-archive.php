@@ -56,16 +56,16 @@ $cards = $cards->posts;
             $archive_excerpt = get_field("archive_excerpt", $card->ID);
             $position = $key % 2;
         ?>
-            <div class="flex mb-[100px] last:mb-0 <?php echo $position ? 'flex-row-reverse' : '' ?>">
-                <div class="w-1/2">
-                    <figure>
+            <div class="flex  flex-wrap lg:flex-nowrap  mb-[100px] last:mb-0 <?php echo $position ? 'flex-col-reverse lg:flex-row-reverse' : 'flex-col-reverse lg:flex-row' ?>">
+                <div class="w-full lg:w-1/2">
+                    <figure class="mt-[70px] lg:mt-0">
                         <img class="rounded-[24px] lg:h-[736px]" src="<?php echo esc_url(get_the_post_thumbnail_url($card->ID)) ?>">
                     </figure>
                 </div>
-                <div class="w-1/2 flex flex-col justify-center <?php echo $position ? 'pr-[70px]' : 'pl-[70px]' ?>">
+                <div class="w-full lg:w-1/2 flex flex-col justify-center <?php echo $position ? 'lg:pr-[70px]' : 'lg:pl-[70px]' ?>">
                     <img class="w-[30px]" src="<?php echo esc_url($icon) ?>">
-                    <h3 class="mt-[30px] text-east-bay text-[36px] font-[700] font-EBGaramond"> <?php echo $card->post_title ?></h3>
-                    <div class="my-[30px] text-bombay leading-[30px] text-[18px]"><?php echo $archive_excerpt ?></div>
+                    <h3 class="mt-[30px] text-east-bay text-[24px] lg:text-[36px] font-[700] font-EBGaramond text-start"> <?php echo $card->post_title ?></h3>
+                    <div class="my-[30px] text-bombay leading-[30px] lg:text-[18px]"><?php echo $archive_excerpt ?></div>
                     <div class="w-fit flex">
                         <a href="<?php echo esc_url(get_the_permalink($card->ID)) ?>" class="btn-dark relative z-[99]">Learn more</a>
                     </div>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AIM Welding</title>
+  <title>Advaita Collective</title>
   <?php wp_head(); ?>
 </head>
 
@@ -18,7 +18,7 @@
     <div class="block_content px-[30px] lg:px-[75px] py-[20px] flex flex-row z-[99]">
       <div class="w-1/2 lg:w-[16%] flex items-center">
         <a href="/">
-          <img class="w-[188px]" src="<?php esc_url(the_field('logo', 'option'))  ?>" alt="">
+          <img class="w-[188px]" src="<?php esc_url(the_field('logo', 'option')) ?>" alt="">
         </a>
       </div>
       <div id="menu-dektop" class="lg:w-[84%] w-[50%] flex justify-end items-center gap-[25px]">
@@ -34,7 +34,7 @@
               <span></span>
             </div>
           </span>
-          <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-dark hidden lg:flex" style="padding: 15px 20px;"><?php echo esc_attr($cta["title"]) ?>l</a>
+          <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-dark hidden lg:flex" style="padding: 15px 20px;"><?php echo esc_attr($cta["title"]) ?></a>
         </div>
       </div>
     </div>

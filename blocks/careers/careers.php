@@ -63,9 +63,9 @@ function meks_time_ago($date)
         <div class="flex flex-wrap lg:flex-nowrap gap-[64px]">
             <div class="lg:w-1/2 relative">
                 <div class="sticky top-[40px]">
-                    <span class="text-[18px] font-[500] text-bombay">We’re Hiring!</span>
+                    <span class="text-[16px] lg:text-[18px] font-[500] text-bombay">We’re Hiring!</span>
                     <h3 class="text-start my-[20px]"><?php echo ($title) ?></h3>
-                    <p class="text-[14px] lg:text-[18px] text-bombay font-500 leading-[30px]"><?php echo ($paragraph) ?></p>
+                    <p class="text-[16px] lg:text-[18px] text-bombay font-500 leading-[30px]"><?php echo ($paragraph) ?></p>
                 </div>
             </div>
             <div class="lg:w-1/2 flex gap-y-[32px] flex-col">
@@ -73,7 +73,7 @@ function meks_time_ago($date)
                 <?php foreach ($job as $key => $item) :
                     $categories = get_the_terms($item->ID, 'job-category');
                     $date = $item->post_date; ?>
-                    <div class="border-t-[1px] border-[rgb(152 162 179 / 26%)] pt-[24px]">
+                    <div class="lg:border-t-[1px] border-[rgb(152 162 179 / 26%)] pt-[24px]">
                         <div class="flex flex-row gap-[10px]">
                             <p class="text-[18px] font-[600] text-ebony"><?php echo $item->post_title ?></p>
                             <div class="bg-alice-blue border-[1px]  border-[#a7d1f5] rounded-[16px] px-[8px] py-[2px] flex gap-[6px] text-[#175CD3] text-[14px]">

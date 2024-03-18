@@ -1,21 +1,21 @@
 {
-    "name": "acf/careers",
-    "title": "areers",
-    "description": "A custom areers for the normal pages.",
+    "name": "acf/quote",
+    "title": "Quote",
+    "description": "A custom Quote for the normal pages.",
     "category": "custom",
     "icon": "block-default",
     "keywords": [
-        "areers"
+        "Quote"
     ],
     "acf": {
         "mode": "edit",
-        "renderTemplate": "careers.php"
+        "renderTemplate": "quote.php"
     },
     "example": {
         "attributes": {
             "mode": "preview",
             "data": {
-                "preview_image_my_acf_block": "/blocks/careers/screenshot.png"
+                "preview_image_my_acf_block": "/blocks/quote/screenshot.png"
             }
         }
     }

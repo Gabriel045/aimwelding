@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Lato': ['Lato', 'sans-serif'],
-        'EBGaramond': ['EBGaramond','sans-serif'],
+        'Lato': ['Lato'],
+        'EBGaramond': ['EBGaramond'],
       },
 
       colors: {

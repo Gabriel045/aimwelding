@@ -49,15 +49,15 @@
                 </div>
             </div>
             <div class="bg-ebony mt-[70px] rounded-[24px] px-[50px] lg:px-[74px] py-[67px] flex flex-wrap lg:flex-nowrap" style="background-repeat: no-repeat; background-position:right; background-image:url(<?php echo get_stylesheet_directory_uri() ?>/assets/images/Group.png)">
-                <div class="w-full lg:w-[50%] text-[24px] lg:text-[38px] leading-[20px] lg:leading-[45px] font-EBGaramond font-[700] text-white text-center lg:text-start">
-                    Subscribe to our weekly newsletter
+                <div class="flex items-center w-full lg:w-[50%] ">
+                    <p class="w-[365px] text-[24px] lg:text-[38px] leading-[20px] lg:leading-[45px] font-EBGaramond font-[700] text-white text-center lg:text-start">Subscribe to our weekly newsletter </p>
                 </div>
                 <div class="w-full lg:w-[50%] flex items-center mt-[30px] lg:mt-0">
                     <?php echo do_shortcode('[gravityform id="1" title="false"]') ?>
                 </div>
             </div>
-            <p class="text-ebony  text-[16px] lg:text-[18px] text-center mt-[30px]">Copyright © Medic X | Designed by BRIX Templates - Powered by Webflow</p>
-        </div>  
+            <p class="text-ebony  text-[16px] lg:text-[18px] text-center mt-[30px]">Copyright © Advaita Collective</p>
+        </div>
     </section>
 </footer>
 

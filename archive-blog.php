@@ -21,10 +21,10 @@ $cards = $cards->posts;
 ?>
 <main>
     <section class="">
-        <div class="block_content px-[30px] lg:px-[75px]">
-            <div class="bg-ebony h-[600px] rounded-[24px] py-[112px] px-[84px] relative flex justify-center items-center">
-                <img class="hidden lg:block absolute left-[-310px] top-[-130px] rotate-[-8deg]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/ribbon_white.png" />
-                <div class="w-full lg:w-[60%]">
+        <div class="block_content px-[0px] lg:px-[75px]">
+            <div class="bg-custom bg-ebony  overflow-hidden lg:h-[600px] lg:rounded-[24px] py-[100px] lg:py-[112px] px-[30px] lg:px-[84px] relative flex justify-center items-center">
+                <img class="hidden lg:block absolute left-[-310px] top-[-130px] rotate-[-8deg]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/ribbon_gray.svg" />
+                <div class="w-full lg:w-[70%]">
                     <h1 class="text-center"> Blog </h1>
                     <p class="text-white text-[18px] leading-[30px] mt-[20px] text-center">Lorem ipsum dolor sit amet consectetur rhoncus morbi cum enim aliquam cras eget justo laoreet tellus orci sed sit purus eget eget mauris nisi quam nibh imperdiet.</p>
                 </div>
@@ -39,16 +39,18 @@ $cards = $cards->posts;
                     $date = $card->post_date;
                     $newDate = date("F d, Y", strtotime($date));
                 ?>
-                    <div class="w-[31%] cursor-pointer">
+                    <div class="w-full lg:w-[31%] cursor-pointer">
                         <a href="<?php echo get_the_permalink($card->ID) ?>">
                             <figure>
 
                                 <img class="rounded-[24px] h-[310px] object-cover w-full" src="<?php echo esc_url(get_the_post_thumbnail_url($card->ID)) ?>" alt="" srcset="">
                             </figure>
                             <h5 class="mt-[20px]"><?php echo $card->post_title ?> </h5>
-                            <div class="mt-[10px]">
+                            <div class="mt-[10px] flex gap-[16px]">
                                 <span class="text-[16px] lg:text-[18px] text-east-bay"><?php echo esc_attr(get_author_name($card->post_author)) ?></span>
-                                <span class="w-[28px]">-</span>
+                                <span class="flex items-center">
+                                    <span class="w-[28px] bg-east-bay h-[1px]"></span>
+                                </span>
                                 <span class="text-[16px] lg:text-[18px] text-east-bay"><?php echo esc_attr($newDate)  ?></span>
                             </div>
                         </a>

@@ -57,7 +57,7 @@ $cta   = get_field("cta");
         <div id="multiple-testimonials" class=" mt-[50px] z-[99]">
             <?php foreach ($cards as $key => $card) : ?>
                 <div class="slider-item">
-                    <div class="h-[405px] rounded-[24px] py-[64px] px-[25px] flex  flex-col  gap-y-[24px] bg-alice-blue">
+                    <div class="h-[350px] lg:h-[380px] rounded-[24px] py-[64px] px-[25px] flex  flex-col  gap-y-[24px] bg-alice-blue">
                         <figure>
                             <img src="<?php echo $card["icon"] ?>" alt="" srcset="">
                         </figure>
@@ -80,7 +80,7 @@ $cta   = get_field("cta");
     jQuery(document).ready(() => {
         jQuery('#multiple-testimonials').slick({
             infinite: true,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 4000,
             slidesToShow: 3,
             slidesToScroll: 1,

@@ -44,9 +44,9 @@ $text               = get_field('text');
 ?>
 
 <section class="">
-    <div class="block_content px-[30px] lg:px-[75px]">
-        <div class="bg-ebony rounded-[24px] py-[112px] px-[84px] relative">
-            <img class="hidden lg:block absolute right-[-76px] bottom-[-58px] rotate-[80deg]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/ribbon_white.png" />
+    <div class="block_content px-0 lg:px-[75px] lg:pt-[20px]">
+        <div class="bg-ebony lg:rounded-[24px] py-[112px] px-[30px] lg:px-[84px] relative">
+            <img class="absolute right-[-150px] lg:right-[-76px] bottom-[-150px] lg:bottom-[-58px] rotate-[80deg]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/ribbon_white.png" />
             <div class="w-full lg:w-[60%]">
                 <h1><?php echo $title ?></h1>
                 <p class="text-white text-[18px] leading-[30px] mt-[20px]"><?php echo $text ?></p>

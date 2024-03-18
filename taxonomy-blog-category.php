@@ -29,8 +29,8 @@ $cards = $cards->posts;
 ?>
 <main>
     <section class="">
-        <div class="block_content px-[30px] lg:px-[75px]">
-            <div class="bg-ebony h-[600px] rounded-[24px] py-[112px] px-[84px] relative flex justify-center items-center">
+        <div class="block_content lg:px-[75px]">
+            <div class="bg-custom  bg-ebony lg:h-[600px] lg:rounded-[24px] py-[100px] lg:py-[112px] px-[30px] lg:px-[84px] relative flex justify-center items-center">
                 <img class="hidden lg:block absolute left-[-310px] top-[-130px] rotate-[-8deg]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/ribbon_white.png" />
                 <div class="w-full lg:w-[60%]">
                     <h1 class="text-center"> Blog </h1>
@@ -47,7 +47,7 @@ $cards = $cards->posts;
                     $date = $card->post_date;
                     $newDate = date("F d, Y", strtotime($date));
                 ?>
-                    <div class="w-[31%] cursor-pointer">
+                    <div class="w-fullh lg:w-[31%] cursor-pointer">
                         <a href="<?php echo get_the_permalink($card->ID) ?>">
                             <figure>
                                 <img class="rounded-[24px] h-[310px] object-cover w-full" src="<?php echo esc_url(get_the_post_thumbnail_url($card->ID)) ?>" alt="" srcset="">

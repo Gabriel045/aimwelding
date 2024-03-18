@@ -44,21 +44,21 @@ $faqs           = get_field('faqs');
 ?>
 
 <section class="">
-    <div class="block_content px-[75px] pb-[100px] <?php echo $background == "Dark"  ? 'pt-[100px]' : '' ?>">
-        <div class=" <?php echo $background == "Dark"  ? 'bg-ebony' : 'bg-east-bay' ?> rounded-[24px] relative flex flex-col justify-center items-center mx-[30px] lg:mx-0 px-[40px] py-[75px] ">
-            <img class="absolute top-[48%] lg:top-[-10%] left-[-9%] lg:left-[-9%] rotate-[-95deg] lg:rotate-[-105deg] w-[300px] lg:w-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/ribbon_white.png">
-            <h3 class="text-[24px] lg:text-[56px] leading-[40px] lg:leading-[88px] text-white font-EBGaramond font-[700] lg:w-[60%] text-center relative z-10"> <?php echo $title ?></h3>
-            <div class="w-[70%] mt-[64px]">
+    <div class="block_content p-[30px] lg:px-[75px] pb-[100px] <?php echo $background == "Dark"  ? 'pt-[100px]' : '' ?>">
+        <div class="<?php echo $background == "Dark"  ? 'bg-ebony' : 'bg-east-bay' ?> rounded-[24px] relative flex flex-col justify-center items-center mx-0 px-[34px] lg:px-[40px] py-[75px] ">
+            <img class="absolute  top-[-6%] lg:top-[-10%] left-[-18%] lg:left-[-9%] rotate-[-95deg] lg:rotate-[-105deg] w-[200px] lg:w-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/ribbon_white.png">
+            <h3 class="text-[22px] lg:text-[58px] leading-[40px] lg:leading-[88px] text-white font-EBGaramond font-[700] lg:w-[60%] text-center relative z-10"> <?php echo $title ?></h3>
+            <div class="w-full lg:w-[70%] mt-[37px] lg:mt-[64px]">
                 <?php foreach ($faqs as $key => $item) : ?>
-                    <div class="slider-faq ml-[-3px] pb-[45px] mb-[45px] lg:last:mb-0 last:border-b-0 border-b-[1px] border-[#ffffff4a] inactive" onclick="slideFaq(this, <?php echo $key ?>)">
-                        <h4 class="text-[#FFF] text-[34px] font-[700] font-EBGaramond cursor-pointer relative"><?php echo $item['title'] ?> </h4>
+                    <div class="slider-faq ml-[-3px] pb-[45px] mb-[45px] last:mb-0 last:border-b-0 border-b-[1px] border-[#ffffff4a] relative  inactive " onclick="slideFaq(this, <?php echo $key ?>)">
+                        <h4 class="text-[#FFF] w-[80%] lg:w-full text-[19px] lg:text-[34px] font-[700] font-EBGaramond cursor-pointer "><?php echo $item['title'] ?> </h4>
                         <div class="item-content">
-                            <p class="paragraph w-[70%] text-[#ffffff7a] text-[18px] leading-[30px] pt-[24px]"> <?php echo $item["paragraph"] ?> </p>
+                            <p class="paragraph w-[85%] lg:w-[70%] text-[#ffffff7a] text-[14px] lg:text-[18px] leading-[30px] pt-[24px]"> <?php echo $item["paragraph"] ?> </p>
                         </div>
                     </div>
                 <?php endforeach ?>
             </div>
-            <img class="absolute bottom-[-14%] rotate-[-46deg] right-[-300px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/ribbon_white.png">
+            <img class="absolute bottom-[-55px] lg:bottom-[-14%] rotate-[-194deg] lg:rotate-[-46deg] lg:right-[-300px] left-[-60px] lg:left-auto w-[200px] lg:w-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/ribbon_white.png">
         </div>
     </div>
 </section>

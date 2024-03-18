@@ -20,4 +20,5 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/blocks/careers');   
     register_block_type(__DIR__ . '/blocks/our-values');   
     register_block_type(__DIR__ . '/blocks/blog-content');   
+    register_block_type(__DIR__ . '/blocks/quote');   
 }

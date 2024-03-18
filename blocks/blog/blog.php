@@ -64,15 +64,19 @@ $cards = $cards->posts;
                 $newDate = date("F d, Y", strtotime($date));
             ?>
                 <article class="w-full lg:w-[32%] flex flex-col">
-                    <figure>
-                        <img class="rounded-[20px]" src="<?php echo esc_url(get_the_post_thumbnail_url($card->ID)) ?>" />
-                    </figure>
-                    <h5 class="text-east-bay mt-[20px] lg:mt-[30px] font-EBGaramond text-[18px] lg:text-[22px] font-[700] leading-[20px] lg:lieading-[28px]"> <?php echo esc_attr($card->post_title) ?> </h5>
-                    <div class="mt-[10px]">
-                        <span class="text-[16px] lg:text-[18px] text-east-bay"><?php echo esc_attr(get_author_name($card->post_author)) ?></span>
-                        <span class="w-[28px]">-</span>
-                        <span class="text-[16px] lg:text-[18px] text-east-bay"><?php echo esc_attr($newDate)  ?></span>
-                    </div>
+                    <a href="<?php echo get_the_permalink($card->ID) ?>">
+                        <figure>
+                            <img class="rounded-[20px]" src="<?php echo esc_url(get_the_post_thumbnail_url($card->ID)) ?>" />
+                        </figure>
+                        <h5 class="text-east-bay mt-[20px] lg:mt-[30px] font-EBGaramond text-[18px] lg:text-[22px] font-[700] leading-[20px] lg:lieading-[28px]"> <?php echo esc_attr($card->post_title) ?> </h5>
+                        <div class="mt-[10px] flex gap-[16px]">
+                            <span class="text-[16px] lg:text-[18px] text-east-bay"><?php echo esc_attr(get_author_name($card->post_author)) ?></span>
+                            <span class="flex items-center">
+                                <span class="w-[28px] bg-east-bay h-[1px]"></span>
+                            </span>
+                            <span class="text-[16px] lg:text-[18px] text-east-bay"><?php echo esc_attr($newDate)  ?></span>
+                        </div>
+                    </a>
                 </article>
             <?php endforeach ?>
         </div>

@@ -71,18 +71,20 @@ $cards = $cards->posts;
                 $icon            = get_field("icon", $card->ID);
                 $title           = get_field("title", $card->ID);
             ?>
-                <div class="slider-item">
-                    <div class="h-[405px] rounded-[24px] py-[64px] px-[25px] flex  flex-col  gap-y-[24px] bg-alice-blue">
-                        <figure>
-                            <img src="<?php echo $icon ?>" alt="" srcset="">
-                        </figure>
-                        <h5 class="text-east-bay font-EBGaramond text-[28px] font-[700]"><?php echo $card->post_title ?> </h5>
-                        <p class="text-[18] text-bombay"><?php echo $card->post_excerpt ?></p>
-                        <a class="text-east-bay text-[18px] font-[700] flex " href="<?php echo esc_url(get_the_permalink($card->ID)) ?>">
-                            Learn more
-                            <img class="ml-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/arrow-right-blue.svg">
-                        </a>
-                    </div>
+                <div class="slider-item hover-arrow">
+                    <a class="" href="<?php echo esc_url(get_the_permalink($card->ID)) ?>">
+                        <div class="h-[380px] lg:h-[390px] rounded-[24px] py-[40px] px-[25px] flex  flex-col  gap-y-[24px] bg-alice-blue">
+                            <figure>
+                                <img class="h-[52px] lg:h-[72px]" src="<?php echo $icon ?>" alt="" srcset="">
+                            </figure>
+                            <h5 class="text-east-bay font-EBGaramond text-[28px] font-[700]"><?php echo $card->post_title ?> </h5>
+                            <p class="text-[18] text-bombay"><?php echo $card->post_excerpt ?></p>
+                            <div class="text-east-bay text-[18px] font-[700] flex ">
+                                Learn more
+                                <img class="arrow ml-[10px] mr-[5px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/arrow-right-blue.svg">
+                            </div>
+                        </div>
+                    </a>
                 </div>
             <?php endforeach ?>
         </div>
@@ -93,15 +95,15 @@ $cards = $cards->posts;
         </div>
     </div>
 </section>
-<?php if(!is_single()) : ?>
-    <img id="ribbon" class="hidden lg:block  absolute right-[13%] rotate-[29deg]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/bg-1.png">
+<?php if (!is_single()) : ?>
+    <img id="ribbon" class="hidden lg:block  absolute right-[13%] rotate-[29deg] top-[1836.12px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/bg-1.png">
 <?php endif ?>
 
 <script>
     jQuery(document).ready(() => {
         jQuery('#multiple-items-services').slick({
             infinite: true,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 4000,
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -118,8 +120,5 @@ $cards = $cards->posts;
                 }
             }]
         });
-
-        let coords = document.querySelector("#our-services").getBoundingClientRect()
-        document.querySelector("#ribbon").style.top = `${coords.top+ 300}px`
     })
 </script>

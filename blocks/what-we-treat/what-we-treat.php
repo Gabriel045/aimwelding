@@ -56,14 +56,14 @@ $cta   = get_field("cta");
         </div>
         <div id="multiple-items" class="mt-[50px]">
             <?php foreach ($cards as $key => $card) : ?>
-                <div class="slider-item">
-                    <div class="h-[262px] rounded-[24px] p-[35px] flex  flex-col justify-end gap-y-[24px]" style="background-size:cover; background-repeat:no-repeat; background-image:url(<?php echo esc_url($card["background"]) ?>)">
+                <div class="slider-item hover-arrow">
+                    <a href="<?php echo $card["link"]["url"] ?>" target="<?php echo $card["link"]["traget"] ?>" class="h-[262px] rounded-[24px] p-[35px] flex  flex-col justify-end gap-y-[24px]" style="background-size:cover; background-repeat:no-repeat; background-image:url(<?php echo esc_url($card["background"]) ?>)">
                         <h5 class="text-white font-EBGaramond text-[28px] font-[700]"><?php echo $card["title"] ?> </h5>
-                        <a class="text-white text-[18px] font-[700] flex " href="<?php echo $card["link"]["url"] ?>" target="<?php echo $card["link"]["traget"] ?>">
+                        <div class="text-white text-[18px] font-[700] flex ">
                             <?php echo $card["link"]["title"] ?>
-                            <img class="ml-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Arrow Right.svg">
-                        </a>
-                    </div>
+                            <img class="arrow ml-[10px] mr-[5px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Arrow Right.svg">
+                        </div>
+                    </a>
                 </div>
             <?php endforeach ?>
         </div>
@@ -88,15 +88,13 @@ $cta   = get_field("cta");
             arrows: true,
             prevArrow: "<span class='a-left  control-c prev slick-prev relative'></span>",
             nextArrow: "<span class='a-right  control-c next slick-next relative'></span>",
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 }
-            ]
+            }]
         });
     })
 </script>
