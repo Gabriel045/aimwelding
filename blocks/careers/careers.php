@@ -58,7 +58,7 @@ function meks_time_ago($date)
 }
 ?>
 
-<section class="relative">
+<section class="relative" style="overflow:visible;">
     <div class="block_content relative lg:px-[75px] px-[30px] py-[100px]">
         <div class="flex flex-wrap lg:flex-nowrap gap-[64px]">
             <div class="lg:w-1/2 relative">

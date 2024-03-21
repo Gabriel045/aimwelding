@@ -50,10 +50,10 @@ $faqs           = get_field('faqs');
             <h3 class="text-[22px] lg:text-[58px] leading-[40px] lg:leading-[88px] text-white font-EBGaramond font-[700] lg:w-[60%] text-center relative z-10"> <?php echo $title ?></h3>
             <div class="w-full lg:w-[70%] mt-[37px] lg:mt-[64px]">
                 <?php foreach ($faqs as $key => $item) : ?>
-                    <div class="slider-faq ml-[-3px] pb-[45px] mb-[45px] last:mb-0 last:border-b-0 border-b-[1px] border-[#ffffff4a] relative  inactive " onclick="slideFaq(this, <?php echo $key ?>)">
-                        <h4 class="text-[#FFF] w-[80%] lg:w-full text-[19px] lg:text-[34px] font-[700] font-EBGaramond cursor-pointer "><?php echo $item['title'] ?> </h4>
+                    <div class="slider-faq ml-[-3px] pb-[45px] mb-[45px] last:mb-0 last:border-b-0 border-b-[1px] border-[#ffffff4a] z-[99] relative  inactive " onclick="slideFaq(this, <?php echo $key ?>)">
+                        <h4 class="text-[#FFF] w-[92%] lg:w-full text-[19px] lg:text-[34px] font-[700] font-EBGaramond cursor-pointer "><?php echo $item['title'] ?> </h4>
                         <div class="item-content">
-                            <p class="paragraph w-[85%] lg:w-[70%] text-[#ffffff7a] text-[14px] lg:text-[18px] leading-[30px] pt-[24px]"> <?php echo $item["paragraph"] ?> </p>
+                            <p class="paragraph w-[95%] lg:w-[70%] text-[#ffffff7a] text-[14px] lg:text-[18px] leading-[20px] lg:leading-[30px] pt-[24px]"> <?php echo $item["paragraph"] ?> </p>
                         </div>
                     </div>
                 <?php endforeach ?>

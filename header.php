@@ -73,9 +73,9 @@
 
 
     // disable Herf to some items in the menu
-    let menuItems = document.querySelectorAll(".menu-item-has-children a")
-    let result = menuItems.forEach((item) => {
-      item.removeAttribute("href")
+    //let menuItems = document.querySelectorAll(".menu-item-has-children a")
+    //let result = menuItems.forEach((item) => {
+    //  item.removeAttribute("href")
 
-    })
+    //})
   </script>

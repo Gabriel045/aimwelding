@@ -39,7 +39,7 @@ $cards = $cards->posts;
                     $date = $card->post_date;
                     $newDate = date("F d, Y", strtotime($date));
                 ?>
-                    <div class="w-full lg:w-[31%] cursor-pointer">
+                    <div class="w-full lg:w-[31.85%] cursor-pointer">
                         <a href="<?php echo get_the_permalink($card->ID) ?>">
                             <figure>
 

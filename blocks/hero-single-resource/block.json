@@ -1,0 +1,22 @@
+{
+    "name": "acf/hero-single-resource",
+    "title": "Hero Single Resource",
+    "description": "A custom Hero Single Resource for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Hero Single Resource"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "hero-single-resource.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/hero-single-resource/screenshot.png"
+            }
+        }
+    }
+}

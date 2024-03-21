@@ -43,15 +43,15 @@ $cards   =  get_field('cards');
 
 ?>
 
-<section class="">
-    <div class="block_content bg-alice-blue px-[30px] lg:px-[75px] py-[100px] lg:flex lg:flex-col lg:items-center">
+<section class="bg-alice-blue">
+    <div class="block_content  px-[30px] lg:px-[75px] py-[100px] lg:flex lg:flex-col lg:items-center">
         <h3><?php echo $title ?></h3>
         <p class="text-[18px] leading-[30px] text-bombay text-center mt-[30px] lg:w-[80%]"><?php echo $text ?></p>
         <div class="hidden lg:flex mt-[50px] flex-wrap gap-[28px] gap-y-[28px]">
             <?php foreach ($cards as $key => $card) : ?>
                 <article class="w-[31.8%] h-[412px] rounded-[24px] px-[30px]  py-[53px] flex flex-col justify-end" style="background-position:center; background-size:cover; background-image:url(<?php echo $card["background"] ?>)">
                     <h5 class="text-white font-EBGaramond text-[28px] font-[700]"><?php echo $card["title"] ?></h5>
-                    <p class="mt-[10px] text-white test-[18px] leading-[30px]"><?php echo $card["text"] ?></p>
+                    <p class="mt-[18px] text-white text-[18px] leading-[30px]"><?php echo $card["text"] ?></p>
                 </article>
             <?php endforeach ?>
         </div>

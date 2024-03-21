@@ -58,7 +58,7 @@ $cards = $cards->posts;
         ?>
             <div class="flex  flex-wrap lg:flex-nowrap  mb-[100px] last:mb-0 <?php echo $position ? 'flex-col-reverse lg:flex-row-reverse' : 'flex-col-reverse lg:flex-row' ?>">
                 <div class="w-full lg:w-1/2">
-                    <figure class="mt-[70px] lg:mt-0">
+                    <figure class="mt-[40px] lg:mt-0">
                         <img class="rounded-[24px] lg:h-[736px]" src="<?php echo esc_url(get_the_post_thumbnail_url($card->ID)) ?>">
                     </figure>
                 </div>

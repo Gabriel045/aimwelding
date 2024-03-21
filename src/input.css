@@ -78,6 +78,15 @@ h3{
     line-height: normal;
 }
 
+h4{
+    color: #405789;
+    font-family: "EB Garamond";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
 h5{
     color: #405789;
     font-family: "EB Garamond";
@@ -117,6 +126,10 @@ h5{
         list-style: disc;
         padding-left: 20px;
         margin-left: 20px;
+    }
+
+    a{
+        text-decoration: underline;
     }
 
 } 
@@ -632,20 +645,21 @@ h5{
     &.active::after {
         content: url('../assets/images/Less.svg') !important;
         position: absolute;
-        right: 0px;
+        right: -15px;
         top: 10px;
         width: 28px;
         height: 28px;
-
+        cursor: pointer;
     }
 
     &.inactive::after {
         content: url('../assets/images/Add.svg');
         position: absolute;
-        right: 0px;
-        top: 10px;
+        right: -15px;
+        top: 0;
         width: 28px;
         height: 28px;
+        cursor: pointer;
 
     }
 }
@@ -729,6 +743,45 @@ h5{
     background-repeat: no-repeat;
     background-position: 70% 45%;
     background-image: url('../assets/images/ribbon_gray.svg');
+}
+
+#list-resources{
+    ol,ul {
+        list-style: auto;
+        color: #8995AA;
+
+        li{
+            margin-bottom: 5px;
+            text-decoration: underline;
+            font-size: 18px;
+        }
+    }
+} 
+
+@media screen and (max-width: 1250px) {
+    #hero-image-left{
+        .img-bg{
+            width: 400px;
+        }
+
+        .left-image {
+                width: 500px !important;
+        }
+        .read-art{
+            display: none;
+        }
+        .lg\:pr-\[74px\]{
+            padding-right: 30px;
+        }
+    }
+}
+
+#single-resource-paragraph p{
+    color: #8995AA;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
 }
 
 @media screen and (max-width: 1023px){
@@ -816,6 +869,9 @@ h5{
         background-position: center;
         background-size: cover;
     }
+    #hero-image-left .bg-custom{
+        background-image: none;
+    }
 
     #blog-content p{
         font-size: 16px !important;
@@ -823,6 +879,30 @@ h5{
 
     #hero-image .bg-custom {
         background-image: none;
+    }
+
+    .slider-faq {
+        &.active::after {
+            right: -20px;
+        }
+
+        &.inactive::after {
+            right: -20px;
+        }
+    }
+
+    #titles h3 {
+        font-size: 36px !important;
+    }
+
+    #list-resources{
+        ol,ul{
+            margin-left: 20px;
+            li {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        } 
     }
 }
 
@@ -842,6 +922,12 @@ h5{
 
     #job-form .gform_footer input[type="submit"]{
         width: 100%;
+    }
+
+    #hero-image-left {
+        .left-image {
+            width: 100% !important;
+        }
     }
 }
 

@@ -1,0 +1,22 @@
+{
+    "name": "acf/resource-single-content",
+    "title": "Resource Single Content",
+    "description": "A custom Resource Single Content for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Resource Single Content"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "resource-single-content.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/resource-single-content/screenshot.png"
+            }
+        }
+    }
+}
