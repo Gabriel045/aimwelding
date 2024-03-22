@@ -37,8 +37,10 @@ if (!empty($block['align'])) {
 }
 
 // Load values and assign defaults.
+$post_type = get_field('select_query');
+
 $args = array(
-    'post_type'      => 'service',
+    'post_type'      => $post_type,
     'posts_per_page' => -1,
     'orderby'        => 'Name',
     'order'          => 'Asc',

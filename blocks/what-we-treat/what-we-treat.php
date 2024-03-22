@@ -38,8 +38,21 @@ if (!empty($block['align'])) {
 
 // Load values and assign defaults.
 $title = get_field("title");
-$cards = get_field("cards");
+$excerpt = get_field("excerpt");
 $cta   = get_field("cta");
+
+$args = array(
+    'post_type'      => 'what-we-treat',
+    'posts_per_page' =>  6,
+    'post__not_in'   => array($post->ID),
+    'orderby'        => 'Date',
+    'order'          => 'Desc',
+    'post_status'    => 'publish'
+);
+
+$cards = new WP_Query($args);
+$cards = $cards->posts;
+
 
 ?>
 
@@ -57,10 +70,13 @@ $cta   = get_field("cta");
         <div id="multiple-items" class="mt-[50px]">
             <?php foreach ($cards as $key => $card) : ?>
                 <div class="slider-item hover-arrow">
-                    <a href="<?php echo $card["link"]["url"] ?>" target="<?php echo $card["link"]["traget"] ?>" class="h-[262px] rounded-[24px] p-[35px] flex  flex-col justify-end gap-y-[24px]" style="background-size:cover; background-repeat:no-repeat; background-image:url(<?php echo esc_url($card["background"]) ?>)">
-                        <h5 class="text-white font-EBGaramond text-[28px] font-[700]"><?php echo $card["title"] ?> </h5>
+                    <a href="<?php echo get_the_permalink($card->ID) ?>" class="<?php echo $excerpt  ? 'h-[400px]' : 'h-[262px]' ?> rounded-[24px] p-[35px] flex  flex-col justify-end gap-y-[24px]" style="background-size:cover; background-repeat:no-repeat; background-image:linear-gradient(rgb(0 0 0 / 34%) 100%, rgba(0, 0, 0, 0.5) 100%), url(<?php echo esc_url(get_the_post_thumbnail_url($card->ID)) ?>)">
+                        <h5 class="text-white font-EBGaramond text-[28px] font-[700]"><?php echo $card->post_title ?> </h5>
+                        <?php if ($excerpt) : ?>
+                            <p style="color:white"><?php echo $card->post_excerpt ?></p>
+                        <?php endif ?>
                         <div class="text-white text-[18px] font-[700] flex ">
-                            <?php echo $card["link"]["title"] ?>
+                            Learn more
                             <img class="arrow ml-[10px] mr-[5px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Arrow Right.svg">
                         </div>
                     </a>

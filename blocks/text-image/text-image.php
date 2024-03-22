@@ -42,7 +42,7 @@ $cards   =  get_field('card');
 
 ?>
 
-<section class="">
+<section id="text-image" class="">
     <div class="block_content px-[30px] lg:px-[75px] py-[80px] <?php echo $background == "Blue" ? 'bg-alice-blue rounded-[24px]  lg:mx-[75px]' : '' ?>">
         <?php foreach ($cards as $key => $card) :
             $image_position =  $card['image_position'];

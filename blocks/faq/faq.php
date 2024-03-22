@@ -41,11 +41,19 @@ $background     =  get_field("background");
 $title          = get_field("title");
 $faqs           = get_field('faqs');
 
+if($background == "Dark"){
+    $bg = "bg-ebony";
+}else if($background == "Light Blue"){
+    $bg = "bg-alice-blue";
+}else{
+    $bg = "bg-east-bay";
+}
+
 ?>
 
-<section class="">
+<section id="faq" class="">
     <div class="block_content p-[30px] lg:px-[75px] pb-[100px] <?php echo $background == "Dark"  ? 'pt-[100px]' : '' ?>">
-        <div class="<?php echo $background == "Dark"  ? 'bg-ebony' : 'bg-east-bay' ?> rounded-[24px] relative flex flex-col justify-center items-center mx-0 px-[34px] lg:px-[40px] py-[75px] ">
+        <div class="<?php echo $bg ?> rounded-[24px] relative flex flex-col justify-center items-center mx-0 px-[34px] lg:px-[40px] py-[75px] ">
             <img class="absolute  top-[-6%] lg:top-[-10%] left-[-18%] lg:left-[-9%] rotate-[-95deg] lg:rotate-[-105deg] w-[200px] lg:w-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/ribbon_white.png">
             <h3 class="text-[22px] lg:text-[58px] leading-[40px] lg:leading-[88px] text-white font-EBGaramond font-[700] lg:w-[60%] text-center relative z-10"> <?php echo $title ?></h3>
             <div class="w-full lg:w-[70%] mt-[37px] lg:mt-[64px]">

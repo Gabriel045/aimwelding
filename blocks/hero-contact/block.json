@@ -1,0 +1,22 @@
+{
+    "name": "acf/hero-contact",
+    "title": "Hero Contact",
+    "description": "A custom Hero Contact for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Hero Contact"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "hero-contact.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/hero-contact/screenshot.png"
+            }
+        }
+    }
+}

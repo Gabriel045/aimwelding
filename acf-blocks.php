@@ -23,4 +23,6 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/blocks/blog-content');   
     register_block_type(__DIR__ . '/blocks/quote');   
     register_block_type(__DIR__ . '/blocks/resource-single-content');   
+    register_block_type(__DIR__ . '/blocks/hero-contact');   
+    register_block_type(__DIR__ . '/blocks/places');   
 }

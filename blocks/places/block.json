@@ -1,0 +1,22 @@
+{
+    "name": "acf/places",
+    "title": "Places",
+    "description": "A custom Places for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Places"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "places.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/places/screenshot.png"
+            }
+        }
+    }
+}
