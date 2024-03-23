@@ -16,12 +16,12 @@
 
   <header class="overflow-x-clip relative flex justify-center">
     <div class="block_content px-[30px] lg:px-[75px] py-[20px] flex flex-row z-[99]">
-      <div class="w-1/2 lg:w-[16%] flex items-center">
+      <div class="w-[60%] lg:w-[25%] flex items-center">
         <a href="/">
-          <img class="w-[188px]" src="<?php esc_url(the_field('logo', 'option')) ?>" alt="">
+          <img class="w-full" src="<?php esc_url(the_field('logo', 'option')) ?>" alt="">
         </a>
       </div>
-      <div id="menu-dektop" class="lg:w-[84%] w-[50%] flex justify-end items-center gap-[25px]">
+      <div id="menu-dektop" class="lg:w-[75%] w-[40%] flex justify-end items-center gap-[25px]">
         <?php echo  wp_nav_menu(array(
           'menu'   => 'Header Menu',
         ));  ?>

@@ -1,0 +1,22 @@
+{
+    "name": "acf/features",
+    "title": "Features",
+    "description": "A custom Features for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Features"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "features.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/features/screenshot.png"
+            }
+        }
+    }
+}

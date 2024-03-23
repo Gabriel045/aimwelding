@@ -8,6 +8,8 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/blocks/hero-home');
     register_block_type(__DIR__ . '/blocks/hero');   
     register_block_type(__DIR__ . '/blocks/hero-single-resource');   
+    register_block_type(__DIR__ . '/blocks/hero-contact');   
+    register_block_type(__DIR__ . '/blocks/hero-single-continuum-cares');   
     register_block_type(__DIR__ . '/blocks/what-we-treat');
     register_block_type(__DIR__ . '/blocks/our-services');   
     register_block_type(__DIR__ . '/blocks/our-team');   
@@ -23,6 +25,5 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/blocks/blog-content');   
     register_block_type(__DIR__ . '/blocks/quote');   
     register_block_type(__DIR__ . '/blocks/resource-single-content');   
-    register_block_type(__DIR__ . '/blocks/hero-contact');   
     register_block_type(__DIR__ . '/blocks/places');   
 }

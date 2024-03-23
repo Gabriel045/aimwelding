@@ -4,7 +4,7 @@
             <div class="flex flex-wrap lg:flex-nowrap">
                 <div class=" w-full lg:w-[30%]">
                     <a href="/">
-                        <img class="w-[188px]" src="<?php esc_url(the_field('logo', 'option'))  ?>" alt="">
+                        <img class="w-[318px]" src="<?php esc_url(the_field('logo', 'option'))  ?>" alt="">
                     </a>
                     <p class="mt-[18px] leading-[30px] text-bombay"><?php echo (get_field('footer', 'option')['footer_text'])  ?></p>
                     <div class="flex flex-row mt-[20px] gap-[16px]">
